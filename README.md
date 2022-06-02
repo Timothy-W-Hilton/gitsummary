@@ -2,7 +2,13 @@
 
 Pure python utility to print a one-line summary of the current git repository, the current branch, and the hash for the current head.
 
-### usage
+### Installation
+
+``` shell
+pip install gitsummary
+```
+
+### Usage
 
 ``` python
 import gitsummary
