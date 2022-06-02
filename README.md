@@ -7,6 +7,10 @@ Pure python utility to print a one-line summary of the current git repository, t
 ``` shell
 pip install gitsummary
 ```
+or
+``` shell
+conda install gitsummary
+```
 
 ### Usage
 
