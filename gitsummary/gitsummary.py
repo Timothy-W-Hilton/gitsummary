@@ -18,7 +18,10 @@ def print_cwd_git_version():
     """
     try:
         _repo = git.Repo(search_parent_directories=True)
-        _repo_name = _repo.remotes.origin.url.split(".git")[0].split("/")[-1]
+        try:
+            _repo_name = _repo.remotes.origin.url.split(".git")[0].split("/")[-1]
+        except AttributeError as e:
+            _repo_name = _repo.git_dir
         _git_sha = _repo.head.object.hexsha
         _git_short_sha = _repo.git.rev_parse(_git_sha, short=7)
         try:
