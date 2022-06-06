@@ -9,7 +9,7 @@ pip install gitsummary
 ```
 or
 ``` shell
-conda install gitsummary
+conda -c conda-forge install gitsummary
 ```
 
 ### Usage
