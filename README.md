@@ -27,3 +27,9 @@ The git repository is reported as final portion of the URL of the remote 'origin
 ## License
 
 This project is licensed under the terms of the MIT license.
+
+## Credits
+
+Adapted by [Timothy W. Hilton](@Timothy-W-Hilton) from code originally written by [Travis O'Brien](@taobrienlbl).
+
+
