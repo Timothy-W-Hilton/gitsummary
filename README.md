@@ -31,6 +31,6 @@ This project is licensed under the terms of the MIT license.
 
 ## Credits
 
-Adapted by [Timothy W. Hilton](@Timothy-W-Hilton) from code originally written by [Travis O'Brien](@taobrienlbl).
+Adapted by [Timothy W. Hilton](https://github.com/Timothy-W-Hilton) from code originally written by [Travis O'Brien](https://github.com/taobrienlbl).
 
 
