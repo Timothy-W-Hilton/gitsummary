@@ -7,14 +7,26 @@ sometimes for debugging.
 
 """
 
+import datetime
+
 import git
 
 
-def print_cwd_git_version():
+def print_cwd_git_version(print_timestamp: bool = False) -> str:
     """return a string describing source control version information
 
-    The string contains the git repository, branch and revision hash
-    of current working directory
+    The string contains the git repository, branch and revision hash of current
+    working directory
+
+    Parameters
+    ----------
+    print_timestamp : Logical
+        if true, include the current system clock time in the output
+
+    Examples
+    --------
+    import gitsummary
+    gitsummary.print_cwd_git_version()
     """
     try:
         _repo = git.Repo(search_parent_directories=True)
@@ -33,6 +45,10 @@ def print_cwd_git_version():
                 raise
         else:
             branch_str = "On branch {}".format(_git_branch)
-        return "{}:{} at rev {}".format(_repo_name, branch_str, _git_short_sha)
+        output_string = "{}:{} at rev {}".format(_repo_name, branch_str, _git_short_sha)
+        if print_timestamp:
+            tstamp_str = datetime.datetime.now().strftime("%d %b %Y %H:%M:%S")
+            output_string = f"{tstamp_str} {output_str}"
+        return output_string
     except git.InvalidGitRepositoryError:
         return "No git repository detected."
