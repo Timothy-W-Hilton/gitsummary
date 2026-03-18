@@ -49,6 +49,8 @@ def print_cwd_git_version(print_timestamp: bool = False) -> str:
         if print_timestamp:
             tstamp_str = datetime.datetime.now().strftime("%d %b %Y %H:%M:%S")
             output_string = f"{tstamp_str} {output_string}"
+        dirty = _repo.is_dirty(index=False, working_tree=True, untracked_files=False)
+        output_string += " (working tree dirty)" if dirty else " (working tree clean)"
         return output_string
     except git.InvalidGitRepositoryError:
         return "No git repository detected."
