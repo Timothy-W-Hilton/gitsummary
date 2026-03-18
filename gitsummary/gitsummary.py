@@ -48,7 +48,7 @@ def print_cwd_git_version(print_timestamp: bool = False) -> str:
         output_string = "{}:{} at rev {}".format(_repo_name, branch_str, _git_short_sha)
         if print_timestamp:
             tstamp_str = datetime.datetime.now().strftime("%d %b %Y %H:%M:%S")
-            output_string = f"{tstamp_str} {output_str}"
+            output_string = f"{tstamp_str} {output_string}"
         return output_string
     except git.InvalidGitRepositoryError:
         return "No git repository detected."
