@@ -15,18 +15,22 @@ import git
 def print_cwd_git_version(print_timestamp: bool = False) -> str:
     """return a string describing source control version information
 
-    The string contains the git repository, branch and revision hash of current
-    working directory
+    The string contains the git repository, branch, revision hash, and working
+    tree status (clean or dirty) of the current working directory. The working
+    tree is considered dirty if there are unstaged changes to tracked files.
 
     Parameters
     ----------
     print_timestamp : Logical
-        if true, include the current system clock time in the output
+        if true, prepend the current system clock time to the output
 
     Examples
     --------
     import gitsummary
     gitsummary.print_cwd_git_version()
+    # 'some_git_repository:On branch main at rev cd813e5 (working tree clean)'
+    gitsummary.print_cwd_git_version(print_timestamp=True)
+    # '19 Mar 2026 11:40:47 some_git_repository:On branch main at rev cd813e5 (working tree clean)'
     """
     try:
         _repo = git.Repo(search_parent_directories=True)
