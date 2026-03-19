@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.3.3 (2026-03-19)
+
+- Migrated package metadata from `setup.cfg` to `pyproject.toml` (PEP 621),
+  eliminating `setup.cfg` entirely.
+- Restricted publish workflow to trigger only on version tag pushes,
+  preventing version numbers from being consumed on every commit.
+- No changes to package functionality.
+
 ## v0.3.2 (2026-03-19)
 
 Migrate GitHub Actions publish workflow to OIDC trusted publishing,
