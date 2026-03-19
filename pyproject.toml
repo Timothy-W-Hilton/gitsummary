@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gitsummary"
-version = "0.3.3"
+version = "0.3.5"
 description = "print a one-line summary of the current git repository, the current branch, and the hash for the current branch head"
 readme = "README.md"
 requires-python = ">=3.10"

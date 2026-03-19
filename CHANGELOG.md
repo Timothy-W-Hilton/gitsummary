@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.5 (2026-03-19)
+
+Fix attestation conflict between TestPyPI and PyPI publish steps by
+disabling attestations for the TestPyPI upload (attestations are only
+meaningful for the real PyPI release). No changes to package functionality.
+
 ## v0.3.3 (2026-03-19)
 
 - Migrated package metadata from `setup.cfg` to `pyproject.toml` (PEP 621),
