@@ -1,3 +1,16 @@
 [build-system]
-requires = ["setuptools>=42"]
+requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitsummary"
+version = "0.3.3"
+description = "print a one-line summary of the current git repository, the current branch, and the hash for the current branch head"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["GitPython"]
+
+[project.urls]
+Homepage = "https://github.com/Timothy-W-Hilton/gitsummary"
+"Bug Tracker" = "https://github.com/Timothy-W-Hilton/gitsummary/issues"
